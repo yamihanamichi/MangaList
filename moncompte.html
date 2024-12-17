@@ -26,44 +26,56 @@
                         <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="classement.html"><i class="fas fa-trophy"></i> Classement</a>
+                        <a class="nav-link" href="classement.html"><i class="fas fa-trophy"></i> Classement</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="maliste.html"><i class="fas fa-list"></i> Ma Liste</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="moncompte.html"><i class="fas fa-user"></i> Mon Compte</a>
+                        <a class="nav-link active" href="moncompte.html"><i class="fas fa-user"></i> Mon Compte</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-dark text-white text-center">
-                        <h2>Mon Compte</h2>
-                    </div>
-                    <div class="card-body">
-                        <form id="accountForm">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Pseudo</label>
-                                <input type="text" class="form-control" id="username" required>
+    <main class="container-fluid p-0 account-form-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card account-form-card">
+                        <div class="card-header bg-primary text-white text-center">
+                            <h2 id="formTitle">Connexion</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="accountForm">
+                                <div id="emailGroup" class="mb-3" style="display: none;">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Pseudo</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <div id="confirmPasswordGroup" class="mb-3" style="display: none;">
+                                    <label for="confirmPassword" class="form-label">Confirmer le mot de passe</label>
+                                    <input type="password" class="form-control" id="confirmPassword">
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary" id="submitBtn">Se connecter</button>
+                                </div>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p id="toggleFormText">
+                                    Vous n'avez pas de compte ? 
+                                    <a href="#" id="toggleForm">Créer un compte</a>
+                                </p>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Mot de passe</label>
-                                <input type="password" class="form-control" id="password">
-                            </div>
-                            <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-primary">Modifier mes informations</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
